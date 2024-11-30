@@ -11,7 +11,7 @@ import java.awt.Font;
 public class Cena implements GLEventListener{    
     private float xMin, xMax, yMin, yMax, zMin, zMax;   
     
-    public int oreCount, barCount, diskCount, furnaceCount, anvilCount, moedas = 0;
+    public int oreCount, barCount, diskCount, furnaceCount, anvilCount, coins = 0;
     private Background background;
     private InstructionsPage dialogPage;
     public boolean isDialog1Open = true;
@@ -96,7 +96,7 @@ public class Cena implements GLEventListener{
         ligaLuz(gl);
 
         //Checa se o objetivo foi concluido e parabeniza o jogador
-        if(moedas >= 100){
+        if(coins >= 100){
             isDialog2Open = true;
         }
         if(isDialog1Open){
@@ -180,7 +180,7 @@ public class Cena implements GLEventListener{
                 if (System.currentTimeMillis() - disk1StartTime >= DISK_TIMEOUT) {
                     disk1OnTable = false;
                     disk1StartTime = -1; // Reseta o tempo
-                    moedas += 20;
+                    coins += 20;
                 }
             }
         }
@@ -195,7 +195,7 @@ public class Cena implements GLEventListener{
                 if (System.currentTimeMillis() - disk2StartTime >= DISK_TIMEOUT) {
                     disk2OnTable = false;
                     disk2StartTime = -1; // Reseta o tempo
-                    moedas += 20;
+                    coins += 20;
                 }
             }
         }
@@ -210,7 +210,7 @@ public class Cena implements GLEventListener{
                 if (System.currentTimeMillis() - disk3StartTime >= DISK_TIMEOUT) {
                     disk3OnTable = false;
                     disk3StartTime = -1; // Reseta o tempo
-                    moedas += 20;
+                    coins += 20;
                 }
             }
         }
@@ -226,7 +226,7 @@ public class Cena implements GLEventListener{
                      "  bars: " + barCount + 
                      "  disks: " + diskCount +
                      "                  " +
-                     "      moedas: " + moedas);
+                     "      moedas: " + coins);
         desenhaTexto(gl, 325, 490, Color.DARK_GRAY, String.valueOf(furnaceCount));
         desenhaTexto(gl, 475, 430, Color.DARK_GRAY, String.valueOf(anvilCount));
        
