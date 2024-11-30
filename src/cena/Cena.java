@@ -258,8 +258,8 @@ public class Cena implements GLEventListener{
         dialogPage.generateIP(gl);
         gl.glPopMatrix();
         
-        desenhaTexto(gl, 220, 410, Color.BLACK, "Parabéns! Você concluiu");
-        desenhaTexto(gl, 170, 350, Color.BLACK, "Você concluiu o seu objetivo!");
+        desenhaTexto(gl, 220, 410, Color.BLACK, "Parabéns! Você conseguiu!");
+        desenhaTexto(gl, 170, 350, Color.BLACK, "Você concluiu o seu objetivo.");
         desenhaTexto(gl, 170, 330, Color.BLACK, "Pressione ESC para fechar");
         desenhaTexto(gl, 170, 310, Color.BLACK, "o jogo!");
         desenhaTexto(gl, 170, 250, Color.BLACK, "Obrigado por jogar!");
