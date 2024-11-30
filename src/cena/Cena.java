@@ -223,10 +223,10 @@ public class Cena implements GLEventListener{
         //Lógica dos textos de menu
         desenhaTexto(gl, 10, 15, Color.WHITE, 
                      "ores: " + oreCount + 
-                     "  bars: " + barCount + 
-                     "  disks: " + diskCount +
+                     "    bars: " + barCount + 
+                     "    disks: " + diskCount +
                      "                  " +
-                     "      moedas: " + coins);
+                     "          coins: " + coins);
         desenhaTexto(gl, 325, 490, Color.DARK_GRAY, String.valueOf(furnaceCount));
         desenhaTexto(gl, 475, 430, Color.DARK_GRAY, String.valueOf(anvilCount));
        
